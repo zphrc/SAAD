@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistrationController;
 
 Route::get('/', function () {
     session_start();
@@ -27,3 +28,5 @@ Route::get('/images/{filename}', function($filename){
 Route::post('/login/authentication', [LoginController::class, 'authentication']);
 
 Route::get('/get_accounts', [LoginController::class, 'get_accounts']);
+
+Route::post('/register/registration', [RegistrationController::class, 'registration']);
