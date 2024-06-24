@@ -6,6 +6,10 @@ use DB;
 
 class Registration extends Model
 {
+    function create_account($user_credentials){
+        return $user_credentials;
+    }
+
     function credentials_validation($account, $token){
         $presaved_token = $token;
         $hashed_token = hash('sha256', $token);
@@ -91,3 +95,12 @@ class Registration extends Model
         return $database_response;
     }
 }
+
+/*
+function create_account($user_credentials) {
+    DB::table('users')->insert([
+        'email' => 'kayla@example.com',
+        'votes' => 0
+    ]);
+}
+*/
