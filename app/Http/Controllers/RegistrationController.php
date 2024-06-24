@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Crypt;
 
 class RegistrationController extends Controller
 {
+    protected function registration(Request $request)
+    {
+        $registration = new Registration();
+        $response = $registration->create_account($request);
+        return $response;
+    }
+
     protected function validate_credentials(Request $request)
     {      
         $registration = new Registration();
