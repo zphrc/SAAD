@@ -28,7 +28,6 @@ if (!isset($_SESSION['userID'])) {
         <div class="content">
             <h2>Dashboard</h2>
             <p>Welcome, <?php echo $_SESSION['userFname']; ?> <?php echo $_SESSION['userLname']; ?>!</p>
-            <!-- Add your dashboard content here -->
         </div>
     </div>
 
