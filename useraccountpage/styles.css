@@ -1,0 +1,41 @@
+
+/*  index.html  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-brand {
+    margin: 0 auto;
+}
+.profile-icon {
+    cursor: pointer;
+}
+
+/*  dashboard.php  */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    color: #000;
+    padding: 40px;
+}
+.sidebar a {
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+.sidebar a:hover {
+    transition-duration: 0.5s;
+    border-left-style: solid;
+    border-color: black;
+    font-weight: 600;
+}
+.content {
+    flex: 1;
+    padding: 40px;
+}
