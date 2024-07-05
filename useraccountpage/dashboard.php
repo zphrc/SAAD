@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['user_id'])) {
-//     header("Location: dashboard.php");
-//     exit();
-// }
+session_start();
+if (!isset($_SESSION['userID'])) {
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 <!doctype html>
@@ -21,13 +21,13 @@
         <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
-            <a href="appointments.php">Appointments</a>
-            <a href="settings.php">Settings</a>
+            <a href="addressbook.php">Addresses</a>
+            <a href="orders.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
         <div class="content">
             <h2>Dashboard</h2>
-            <p>Welcome, Jane<?php //echo $_SESSION['first_name']; ?>!</p>
+            <p>Welcome, <?php echo $_SESSION['userFname']; ?> <?php echo $_SESSION['userLname']; ?>!</p>
             <!-- Add your dashboard content here -->
         </div>
     </div>

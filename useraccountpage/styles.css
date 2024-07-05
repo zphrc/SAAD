@@ -30,12 +30,37 @@
     margin: 10px;
 }
 .sidebar a:hover {
-    transition-duration: 0.5s;
-    border-left-style: solid;
-    border-color: black;
+    border-left: 1px solid black;
     font-weight: 600;
 }
 .content {
     flex: 1;
     padding: 40px;
+}
+
+/* editprofile.php */
+.to-dashboard {
+    text-decoration: none;
+    color: rgb(65, 64, 64);
+}
+.to-dashboard:hover {
+    color: rgb(107, 107, 107);
+    text-decoration: underline;
+}
+form {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    /* border: 1px solid blue; */
+}
+.form-control {
+    margin-bottom: 15px;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }

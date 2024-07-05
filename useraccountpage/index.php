@@ -23,7 +23,7 @@
             </a>-->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link profile-icon" href="dashboard.php">
+                    <a class="nav-link profile-icon" href="index.html">
                         <img src="img\profileicon.png" alt="Profile" width="30" height="30">
                     </a>
                 </li>
