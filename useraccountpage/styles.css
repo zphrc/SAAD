@@ -21,17 +21,18 @@
     height: 100vh;
     color: #000;
     padding: 40px;
+    background-color: #FFDB58;
 }
 .sidebar a {
-    color: rgb(83, 83, 83);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
     text-decoration: none;
     display: block;
     padding: 5px;
     margin: 10px;
 }
 .sidebar a:hover {
-    border-left: 1px solid black;
-    font-weight: 600;
+    background-color: #fce180;
 }
 .content {
     flex: 1;
@@ -57,10 +58,11 @@ form {
     margin-bottom: 15px;
 }
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #FFDB58; 
+    color: black; 
+    border: none;
 }
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #fce180;
+    color: black; 
 }

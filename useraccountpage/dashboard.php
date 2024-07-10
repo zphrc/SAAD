@@ -19,10 +19,9 @@ if (!isset($_SESSION['userID'])) {
 
     <div class="wrapper">
         <div class="sidebar">
-            <a href="dashboard.php">Dashboard</a>
+            <a href="dashboard.php">My Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
-            <a href="addressbook.php">Addresses</a>
-            <a href="orders.php">Orders</a>
+            <a href="ordhistory.php">My Orders</a><hr>
             <a href="logout.php">Logout</a>
         </div>
         <div class="content">
