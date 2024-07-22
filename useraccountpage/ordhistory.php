@@ -126,12 +126,16 @@ $total_pages = ceil($total_orders / 10);
                 </tbody>
             </table>
             <nav aria-label="...">
-                <ul class="pagination">
-                    <?php for ($i = 1; $i <= $total_pages; $i++):?>
-                        <li class="page-item <?php echo $i == $page? 'active' : '';?>"><a class="page-link" href="ordhistory.php?page=<?php echo $i;?>&filter_by=<?php echo $filter_by;?>&filter_value=<?php echo $filter_value;?>"><?php echo $i;?></a></li>
-                    <?php endfor;?>
-                </ul>
-            </nav>
+    <ul class="pagination">
+        <?php for ($i = 1; $i <= $total_pages; $i++):?>
+            <li class="page-item <?php echo $i == $page? 'active' : '';?>">
+                <a class="page-link" href="ordhistory.php?page=<?php echo $i;?>&filter_by=<?php echo $filter_by;?>">
+                    <?php echo $i;?>
+                </a>
+            </li>
+        <?php endfor;?>
+    </ul>
+</nav>
         <?php else:?>
             <p>No orders found.</p>
         <?php endif;?>
