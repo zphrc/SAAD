@@ -16,12 +16,12 @@ if (!isset($_SESSION['userID'])) {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="wrapper">
         <div class="sidebar">
-            <a href="dashboard.php">My Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
-            <a href="ordhistory.php">My Orders</a><hr>
+            <a href="addressbook.php">Addresses</a>
+            <a href="ordhistory.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
         <div class="content">
@@ -29,7 +29,6 @@ if (!isset($_SESSION['userID'])) {
             <p>Welcome, <?php echo $_SESSION['userFname']; ?> <?php echo $_SESSION['userLname']; ?>!</p>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

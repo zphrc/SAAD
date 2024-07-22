@@ -82,13 +82,13 @@ $total_pages = ceil($total_orders / 10);
         <a href="dashboard.php">Dashboard</a>
         <a href="editprofile.php">Edit Profile</a>
         <a href="addressbook.php">Addresses</a>
-        <a href="orders.php">Orders</a>
+        <a href="ordhistory.php">Orders</a>
         <a href="logout.php">Logout</a>
     </div>
     <div class="content">
         <h2>Orders</h2>
         <p>Your Recent Orders:</p>
-        <form action="orders.php" method="get">
+        <form action="ordhistory.php" method="get">
             <label for="filter_by">Filter by:</label>
             <select id="filter_by" name="filter_by">
                 <option value="">Select an option</option>
@@ -128,7 +128,7 @@ $total_pages = ceil($total_orders / 10);
             <nav aria-label="...">
                 <ul class="pagination">
                     <?php for ($i = 1; $i <= $total_pages; $i++):?>
-                        <li class="page-item <?php echo $i == $page? 'active' : '';?>"><a class="page-link" href="orders.php?page=<?php echo $i;?>&filter_by=<?php echo $filter_by;?>&filter_value=<?php echo $filter_value;?>"><?php echo $i;?></a></li>
+                        <li class="page-item <?php echo $i == $page? 'active' : '';?>"><a class="page-link" href="ordhistory.php?page=<?php echo $i;?>&filter_by=<?php echo $filter_by;?>&filter_value=<?php echo $filter_value;?>"><?php echo $i;?></a></li>
                     <?php endfor;?>
                 </ul>
             </nav>
@@ -141,5 +141,4 @@ $total_pages = ceil($total_orders / 10);
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 </html>
