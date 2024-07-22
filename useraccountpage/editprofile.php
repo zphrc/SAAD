@@ -31,14 +31,16 @@ $conn->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-    .content {
-        border: 1px solid blue;
-        margin: 40px 200px;
-    }
     </style>
 </head>
 <body>
     <div class="wrapper">
+        <div class="sidebar">
+            <a href="dashboard.php">My Dashboard</a>
+            <a href="editprofile.php">Edit Profile</a>
+            <a href="ordhistory.php">My Orders</a><hr>
+            <a href="logout.php">Logout</a>
+        </div>
         <div class="content">
             <a class="to-dashboard" href="dashboard.php">Back to Dashboard</a>
             <h2>Edit Profile</h2>
@@ -55,8 +57,8 @@ $conn->close();
                     <label for="userLname" class="form-label">Last Name</label>
                     <input type="text" class="form-control" id="userLname" name="userLname" value="<?php echo htmlspecialchars($currentUserLname); ?>" required>
                 </div>
-                <a href="change_password.php" class="btn btn-secondary">Change Password</a>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <!-- <a href="change_password.php" class="btn btn-secondary">Change Password</a> -->
+                <button type="submit" class="btn btn-primary custom">Save Changes</button>
             </form>
         </div>
     </div>
