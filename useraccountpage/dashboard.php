@@ -20,7 +20,7 @@ if (!isset($_SESSION['userID'])) {
         <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
-            <a href="addressbook.php">Addresses</a>
+            <a href="address.php">Addresses</a>
             <a href="ordhistory.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>

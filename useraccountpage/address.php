@@ -13,11 +13,13 @@
         .btn-primary {
             background-color: #000;
             border-color: #000;
+            color: #fff;
         }
 
         .btn-primary:hover {
             background-color: #333;
             border-color: #333;
+            color: #fff;
         }
 
         .btn-danger {
@@ -71,6 +73,16 @@
 
         .form-check-input:checked:hover {
             background-color: #333;
+        }
+
+        .address-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .btn-primary, .btn-danger, .btn-secondary {
+            margin-right: 10px;
         }
 
     </style>
@@ -150,7 +162,7 @@
 
             addresses.forEach(address => {
                 let addressBlock = document.createElement('div');
-                addressBlock.classList.add('address-block');
+                addressBlock.classList.add('address-container'); // Correct class name here
                 addressBlock.dataset.addressId = address.id; // Store address ID in data attribute
                 addressBlock.innerHTML = `
                     <p><strong>Address:</strong> ${address.address}</p>
@@ -166,21 +178,21 @@
             // Attach event listeners to dynamically created buttons
             document.querySelectorAll('.edit-address-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    let addressId = this.closest('.address-block').dataset.addressId;
+                    let addressId = this.closest('.address-container').dataset.addressId;
                     populateAddressForm(addressId);
                 });
             });
 
             document.querySelectorAll('.delete-address-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    let addressId = this.closest('.address-block').dataset.addressId;
+                    let addressId = this.closest('.address-container').dataset.addressId;
                     deleteAddress(addressId);
                 });
             });
 
             document.querySelectorAll('.set-default-address-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    let addressId = this.closest('.address-block').dataset.addressId;
+                    let addressId = this.closest('.address-container').dataset.addressId;
                     setDefaultAddress(addressId);
                 });
             });
