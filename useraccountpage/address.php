@@ -91,10 +91,10 @@
 
     <div class="wrapper">
         <div class="sidebar">
-            <a href="dashboard.php">My Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
-            <a href="ordhistory.php">My Order History</a>
-            <a href="address.php">My Addresses</a><hr>
+            <a href="address.php">Addresses</a>
+            <a href="ordhistory.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
         <div class="content">
