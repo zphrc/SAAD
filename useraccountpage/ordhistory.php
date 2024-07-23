@@ -135,7 +135,7 @@ $total_pages = ceil($total_orders / 10);
             </li>
         <?php endfor;?>
     </ul>
-</nav>
+    </nav>
         <?php else:?>
             <p>No orders found.</p>
         <?php endif;?>
