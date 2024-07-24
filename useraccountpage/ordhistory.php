@@ -82,12 +82,11 @@ $total_pages = ceil($total_orders / 10);
         <a href="dashboard.php">Dashboard</a>
         <a href="editprofile.php">Edit Profile</a>
         <a href="address.php">Addresses</a>
-        <a href="ordhistory.php">Orders</a>
+        <a href="ordhistory.php">Orders</a><hr>
         <a href="logout.php">Logout</a>
     </div>
     <div class="content">
         <h2>Orders</h2>
-        <p>Your Recent Orders:</p>
         <form action="ordhistory.php" method="get">
             <label for="filter_by">Filter by:</label>
             <select id="filter_by" name="filter_by">
