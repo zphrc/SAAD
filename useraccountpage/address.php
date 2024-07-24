@@ -9,51 +9,8 @@
     <style>
 
         /* Address blocks */
-
-        .btn-primary {
-            background-color: #000;
-            border-color: #000;
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: #333;
-            border-color: #333;
-            color: #fff;
-        }
-
-        .btn-danger {
-            background-color: #000;
-            border-color: #000;
-        }
-
-        .btn-danger:hover {
-            background-color: #990000;
-            border-color: #990000;
-        }
-
-        .btn-secondary {
-            background-color: #000;
-            border-color: #000;
-        }
-
-        .btn-secondary:hover {
-            background-color: #666;
-            border-color: #666;
-        }
-
         .modal-content {
             background-color: #fff;
-        }
-
-        .modal-content .btn-primary {
-            background-color: #000;
-            border-color: #000;
-        }
-
-        .modal-content .btn-primary:hover {
-            background-color: #333;
-            border-color: #333;
         }
 
         /* Additional customizations */
@@ -89,15 +46,23 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="sidebar">
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar for desktop -->
+        <div class="col-md-3 d-none d-md-block sidebar-container">
             <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
             <a href="address.php">Addresses</a>
-            <a href="ordhistory.php">Orders</a><hr>
+            <a href="ordhistory.php">Orders</a>
+            <hr>
             <a href="logout.php">Logout</a>
         </div>
-        <div class="content">
+
+        <!-- Sidebar toggle button for mobile -->
+        <button class="btn btn-primary d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+
+        <!-- Content -->
+        <div class="col-md-9 col-12 content table-responsive">
             <h2>Addresses</h2>
 
             <!-- Display added addresses here -->
@@ -148,6 +113,21 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="dashboard.php">Dashboard</a>
+        <a href="editprofile.php">Edit Profile</a>
+        <a href="address.php">Addresses</a>
+        <a href="ordhistory.php">Orders</a>
+        <hr>
+        <a href="logout.php">Logout</a>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -165,6 +145,7 @@
                 addressBlock.classList.add('address-container'); // Correct class name here
                 addressBlock.dataset.addressId = address.id; // Store address ID in data attribute
                 addressBlock.innerHTML = `
+                ${address.isDefault ? '<h5 class="mt-1 text-center">Default Address</h5><br>' : ''}
                     <p><strong>Address:</strong> ${address.address}</p>
                     <p><strong>City:</strong> ${address.city}</p>
                     <p><strong>Barangay:</strong> ${address.brgy}</p>

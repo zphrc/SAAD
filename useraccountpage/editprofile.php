@@ -34,15 +34,23 @@ $conn->close();
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="sidebar">
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar for desktop -->
+        <div class="col-md-3 d-none d-md-block sidebar-container">
             <a href="dashboard.php">Dashboard</a>
             <a href="editprofile.php">Edit Profile</a>
             <a href="address.php">Addresses</a>
-            <a href="ordhistory.php">Orders</a><hr>
+            <a href="ordhistory.php">Orders</a>
+            <hr>
             <a href="logout.php">Logout</a>
         </div>
-        <div class="content">
+
+        <!-- Sidebar toggle button for mobile -->
+        <button class="btn btn-primary d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+
+        <!-- Content -->
+        <div class="col-md-9 col-12 content table-responsive">
             <a class="to-dashboard" href="dashboard.php">Back to Dashboard</a>
             <h2>Edit Profile</h2>
             <form action="update_profile.php" method="POST">
@@ -63,6 +71,21 @@ $conn->close();
             </form>
         </div>
     </div>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="dashboard.php">Dashboard</a>
+        <a href="editprofile.php">Edit Profile</a>
+        <a href="address.php">Addresses</a>
+        <a href="ordhistory.php">Orders</a>
+        <hr>
+        <a href="logout.php">Logout</a>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

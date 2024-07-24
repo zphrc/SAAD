@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /*  index.html  */
 .navbar {
@@ -22,6 +28,7 @@
     color: #000;
     padding: 40px;
     background-color: #FFDB58;
+    display: block;
 }
 .sidebar a {
     color: rgb(0, 0, 0);
@@ -57,12 +64,65 @@ form {
 .form-control {
     margin-bottom: 15px;
 }
-.btn-primary {
+.btn-primary, .btn-danger, .btn-secondary {
     background-color: #FFDB58; 
     color: black; 
     border: none;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-danger:hover, .btn-secondary:hover {
     background-color: #fce180;
     color: black; 
+}
+
+/* ordhistory.php */
+.pagination {
+    justify-content: center;
+}
+.table {
+    text-align: center;
+    border: 1px solid grey;
+}
+.table th {
+    background-color: #FFDB58; /* Background color for the column headers */
+    color: #000; /* Text color for the column headers */
+}
+.offcanvas {
+    background-color: #ffd700; /* Mustard yellow */
+    width: 250px; /* Adjust width as needed */
+}
+.offcanvas-body {
+    background-color: #FFDB58;
+}
+.offcanvas-body a {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+.offcanvas-body a:hover {
+    background-color: #fce180;
+}
+.offcanvas-header {
+    background-color: #FFDB58;
+}
+.sidebar-container {
+    width: 250px;
+    height: 100vh;
+    color: #000;
+    padding: 40px;
+    background-color: #FFDB58;
+    display: block;
+}
+.sidebar-container a {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+.sidebar-container a:hover {
+    background-color: #FFDB58;
 }
